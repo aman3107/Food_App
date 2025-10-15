@@ -1,0 +1,34 @@
+{
+  "name": "food_app",
+  "version": "1.0.0",
+  "description": "Food Delivery App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aman3107/Food_App.git"
+  },
+  "keywords": [
+    "Food",
+    "App"
+  ],
+  "author": "Aman Mittal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aman3107/Food_App/issues"
+  },
+  "homepage": "https://github.com/aman3107/Food_App#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browserList": [
+    "last 2 versions"
+  ]
+}
