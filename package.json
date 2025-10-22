@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/aman3107/Food_App.git"
   },
-  "keywords": [
-    "Food",
-    "App"
-  ],
+  "keywords": [],
   "author": "Aman Mittal",
   "license": "ISC",
   "bugs": {
@@ -22,6 +19,7 @@
   },
   "homepage": "https://github.com/aman3107/Food_App#readme",
   "devDependencies": {
+    "@babel/core": "^7.28.4",
     "parcel": "^2.16.0"
   },
   "dependencies": {
