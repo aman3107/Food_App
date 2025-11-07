@@ -57,3 +57,21 @@
   letter-spacing: -0.45px;
   width: 100%;
 }
+
+.filter {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.filter-btn {
+  margin-left: 200px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+.filter-remove {
+  border: 1px solid black;
+  padding: 8px 2px;
+  background-color: rgba(211, 211, 211, 0.545);
+  cursor: pointer;
+}

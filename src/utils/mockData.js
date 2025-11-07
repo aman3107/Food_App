@@ -1,49 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { StrictMode } from "react";
-import { logo } from "./links";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src={logo} alt="Food Delivery Logo" />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = (props) => {
-  const { resData } = props;
-  const { name, cuisines, avgRating, costForTwo, sla, cloudinaryImageId } =
-    resData.info;
-  return (
-    <div className="res-card">
-      <img
-        className="res-img"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/" +
-          cloudinaryImageId
-        }
-      />
-      <h1 className="res-title">{name}</h1>
-      <h4 className="res-cuisine">{cuisines.join(", ")}</h4>
-      <h4 className="res-rating">{avgRating}⭐</h4>
-      <h4 className="res-amount">{costForTwo}</h4>
-      <h4 className="res-time">{sla.deliveryTime} minutes</h4>
-    </div>
-  );
-};
-
-const resList = [
+export const resList = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
     info: {
@@ -720,32 +675,3 @@ const resList = [
     widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
 ];
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {resList.map((restaurant) => (
-          <RestaurantCard resData={restaurant} key={restaurant.info.id} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <StrictMode>
-    <AppLayout />
-  </StrictMode>
-);
