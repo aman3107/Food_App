@@ -43,12 +43,27 @@
   border: 1px solid rgba(2, 6, 12, 0.08);
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .res-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.res-shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.res-shimmer-card {
+  padding: 5px;
+  width: 200px;
+  height: 400px;
+  background-color: rgba(211, 211, 211, 0.545);
 }
 
 .res-title {
@@ -65,13 +80,64 @@
 }
 
 .filter-btn {
-  margin-left: 200px;
   cursor: pointer;
   padding: 8px 12px;
+  margin-left: 10%;
+  background-color: #0468bf;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+.filter-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .filter-remove {
-  border: 1px solid black;
   padding: 8px 2px;
-  background-color: rgba(211, 211, 211, 0.545);
+  background-color: #0468bf;
   cursor: pointer;
+  margin-left: 5px;
+  color: white;
+  font-size: 15px;
+}
+.filter-remove:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login {
+  cursor: pointer;
+  padding: 0px 15px;
+  color: white;
+  background-color: #0468bf;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.login:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search {
+  display: flex;
+}
+
+.search-btn {
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: #0468bf;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+.search-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 5px;
 }
