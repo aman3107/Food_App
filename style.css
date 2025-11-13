@@ -36,6 +36,7 @@
 .res-card {
   padding: 5px;
   width: 200px;
+  height: 400px;
   background-color: rgba(211, 211, 211, 0.545);
 }
 
@@ -140,4 +141,28 @@
   font-size: 15px;
   font-weight: 400;
   padding-left: 5px;
+}
+
+.error {
+  text-align: center;
+  margin-top: 250px;
+}
+
+.nav {
+  text-decoration: none;
+  color: black;
+}
+
+.nav:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.res-link {
+  text-decoration: none;
+  color: black;
+}
+
+.res-link:hover {
+  color: #0056b3;
 }

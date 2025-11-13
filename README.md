@@ -22,3 +22,8 @@ import {variable_name} from path
 
 1. useState() - State variables
 2. useEffect()
+
+# Types of routing
+
+1. Client Side Routing
+2. Server Side Routing
