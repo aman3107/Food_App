@@ -166,3 +166,43 @@
 .res-link:hover {
   color: #0056b3;
 }
+
+.user-card {
+  padding: 10px;
+  margin: auto;
+  width: 500px;
+  border: 1px solid black;
+}
+
+.add-btn {
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: #0468bf;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.sub-btn {
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: #0468bf;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.add-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sub-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-img {
+  width: 250px;
+  padding-left: 80px;
+}
