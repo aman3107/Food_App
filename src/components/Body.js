@@ -2,30 +2,29 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
+import useRestaurantCard from "../utils/useRestuarantCard";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   // Local State Variables for restaurant
+  const restaurantList = useRestaurantCard();
   const [listOfRestaurants, setlistOfRestaurants] = useState([]);
   const [filteredListRes, setfilteredListRes] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  // Re rendering the list
+  // setting the list data into restaurantlist
   useEffect(() => {
-    fetchData();
-  }, []);
-
-  // fetching the list
-  const fetchData = async () => {
-    const data = await fetch("https://namastedev.com/api/v1/listRestaurants");
-    const json = await data.json();
-    const restaurantList =
-      json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants || [];
-
-    // setting the list data into restaurantlist
     setlistOfRestaurants(restaurantList);
     setfilteredListRes(restaurantList);
-  };
+  }, [restaurantList]);
+
+  const isOnline = useOnlineStatus();
+  if (!isOnline)
+    return (
+      <h1>
+        Looks Like you're offline. Please check your Internet Connecttion...
+      </h1>
+    );
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
@@ -51,7 +50,7 @@ const Body = () => {
                   .includes(searchText.toLowerCase())
               );
               searchFilter.length === 0
-                ? setfilteredListRes(filteredListRes)
+                ? setlistOfRestaurants(filteredListRes)
                 : setlistOfRestaurants(searchFilter);
             }}
           >

@@ -3,14 +3,14 @@ const User = (props) => {
   const { name, location } = props;
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      console.log("Time:");
-    }, 1000);
-    return () => {
-      clearInterval(timer);
-    };
-  }, [[]]);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     console.log("Time:");
+  //   }, 1000);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, [[]]);
   return (
     <div className="user-card">
       <h1>Count: {count}</h1>

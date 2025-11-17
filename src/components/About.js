@@ -1,6 +1,7 @@
 import User from "./User";
 import UserClass from "./UserClass";
 import { Component } from "react";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 class About extends Component {
   constructor(props) {
@@ -14,12 +15,13 @@ class About extends Component {
 
   render() {
     //console.log("Parent Render");
+
     return (
       <div>
         <h1>About</h1>
         <h2>This is a Food App</h2>
         <UserClass name={"Aman Mittal (class)"} location={"Meerut (class)"} />
-        <User name={"Aman Mittal (class)"} location={"Meerut (class)"} />
+        {/* <User name={"Aman Mittal (class)"} location={"Meerut (class)"} /> */}
       </div>
     );
   }

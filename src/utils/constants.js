@@ -4,3 +4,5 @@ export const LOGO_URL =
 export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
 
 export const MENU_API = "https://namastedev.com/api/v1/listRestaurantMenu/";
+
+export const RES_API = "https://namastedev.com/api/v1/listRestaurants";
